@@ -33,9 +33,9 @@ sudo ldconfig
 
 # Build Tesseract
 cd ..
-wget https://tesseract-ocr.googlecode.com/files/tesseract-ocr-3.02.02.tar.gz
-tar -zxvf tesseract-ocr-3.02.02.tar.gz
-cd tesseract-ocr/
+wget https://github.com/tesseract-ocr/tesseract/archive/3.02.02.tar.gz
+tar -zxvf 3.02.02.tar.gz
+cd tesseract-3.02.02
 ./autogen.sh
 ./configure
 make
@@ -49,6 +49,6 @@ TESSDATA_PREFIX=/usr/local/share/
 
 # Download the relevant Tesseract English Language Packages
 cd ..
-wget https://tesseract-ocr.googlecode.com/files/tesseract-ocr-3.02.eng.tar.gz
-tar -xf tesseract-ocr-3.02.eng.tar.gz
+wget https://sourceforge.net/projects/tesseract-ocr-alt/files/tesseract-ocr-3.02.deu.tar.gz
+tar -xf tesseract-ocr-3.02.deu.tar.gz
 sudo cp -r tesseract-ocr/tessdata $TESSDATA_PREFIX
